@@ -1,0 +1,884 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PizzaProject</title>
+
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+        <div class='modal-wrapper'>
+            <div class='new-user__modal'>
+                <div class='header'>
+                    <img src='icons/logo4modal.png' class=modal-header-img>
+                    <h1>10 пиццерий в Россий</h1>
+                    <img class='close-modal' src='icons/close01.png'>
+                </div>
+                <div class='choise-map'>
+                    <ul class='towns-li'>
+                        <li class = 'active-town-li'><span>Москва</span></li>
+                        <li><span>Санкт-Петербург</span></li>
+                        <li><span>Новосибирск</span></li>
+                        <li><span>Екатеринбург</span></li>
+                        <li><span>Нижний Новгород</span></li>
+                        <li><span>Челябинск</span></li>
+                        <li><span>Сочи</span></li>
+                        <li><span>Казань</span></li>
+                        <li><span>Самара</span></li>
+                        <li><span>Пермь</span></li>
+                    </ul>
+                    <div class=map-list>
+                        <div class='map-list-item moscow'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577325.3463670209!2d36.82514088019102!3d55.58152448288451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1637769408733!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class='map-list-item sankt petersburg'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255807.82677608312!2d29.814501417003747!3d59.94046099356573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696378cc74a65ed%3A0x6dc7673fab848eff!2z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sru!4v1637769645429!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class='map-list-item Novosibirsk'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d146570.96861311342!2d82.80932376362384!3d54.97009358897175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe5e190cc4d97%3A0x9b3a0673e1d3e985!2z0J3QvtCy0L7RgdC40LHQuNGA0YHQuiwg0J3QvtCy0L7RgdC40LHQuNGA0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1637769863805!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class='map-list-item ekaterinburg'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139774.65643518607!2d60.47729964083626!3d56.81199149312425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c165eaa062db4b%3A0xd50243d7f7567f20!2z0JXQutCw0YLQtdGA0LjQvdCx0YPRgNCzLCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1637769892115!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+
+                        <div class='map-list-item nizhny novgorod'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d141707.8039273505!2d43.78608537616221!3d56.292128982733566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4151d5f9ee033251%3A0x28d3c0cf849657aa!2z0J3QuNC20L3QuNC5INCd0L7QstCz0L7RgNC-0LQsINCd0LjQttC10LPQvtGA0L7QtNGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1637769926237!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class='map-list-item chelyabinsk'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d145905.93312573378!2d61.2684893358367!3d55.15212488193419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c592cb104a3a8d%3A0xef224a2a6d1711bf!2z0KfQtdC70Y_QsdC40L3RgdC6LCDQp9C10LvRj9Cx0LjQvdGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1637769948538!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class='map-list-item sochi'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46227.66016737523!2d39.69010960305255!3d43.6017783104808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f5d4e111834423%3A0x6e6f61866a5d5df8!2z0KHQvtGH0LgsINCa0YDQsNGB0L3QvtC00LDRgNGB0LrQuNC5INC60YDQsNC5!5e0!3m2!1sru!2sru!4v1637947481944!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class='map-list-item soshi'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d143543.23894013188!2d48.93322191478997!3d55.79561489264516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd99%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1637947752258!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class='map-list-item samara'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152741.81826270715!2d50.05799565774351!3d53.2610312884673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416618e22bd879d3%3A0xba95cda9bb3a030b!2z0KHQsNC80LDRgNCwLCDQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1637947515689!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class='map-list-item perm'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d135236.19021754226!2d56.094194742803026!3d58.02059090764362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c6e1d886f20b%3A0x9b4aca02b87a8a0e!2z0J_QtdGA0LzRjCwg0J_QtdGA0LzRgdC60LjQuSDQutGA0LDQuQ!5e0!3m2!1sru!2sru!4v1637947545633!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--pay modal-->
+
+
+        <div class = 'pay-modal-wrapper'>
+            <div class = 'pay-modal-field'>
+
+                <div class = pay-modal-header-wrapper>
+                    <div class = 'pay-modal-header'>
+                        <img class = 'pay-modal-logo' src = './icons/logo4modal.png'>
+                        <img class = 'pay-modal-close' src = './icons/close01.png'>
+                    </div>
+                </div>
+
+
+                <div class = 'main-content-field'>
+
+                    <div class = 'modal-inputs-wrapper'>         <!--почта, имя, фамилия, номер телефона, адресс и окошечко с городом -->
+
+                        <div class = 'modal-input-block name'>
+                            <h3>Имя</h3>
+                            <input placeholder = 'Введите ваше имя' class = 'pay-modal-input modal-input-name'>
+                        </div>
+    
+                        
+                        <div class = 'modal-input-block mail'>
+                            <h3>Почта</h3>
+                            <input type = 'email' placeholder = 'Введите вашу почту' class = 'pay-modal-input modal-input-email'>
+                        </div>
+    
+                        
+                        <div class = 'modal-input-block number'>
+                            <h3>Номер телефона</h3>
+                            <input placeholder = 'Введите ваш номер телефона' class = 'pay-modal-input modal-input-contact' pattern="[0-9]">
+                        </div>
+    
+                        
+                        <div class = 'modal-input-block submit-btn'><btn class = 'modal-pay-submit-btn'>Оплатить</btn></div>
+    
+                    </div>
+    
+                    <div class = 'pay-modal-map-wrapper'>
+                        
+                        <div class='pay-map moscow'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577325.3463670209!2d36.82514088019102!3d55.58152448288451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1637769408733!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class='pay-map sankt petersburg'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255807.82677608312!2d29.814501417003747!3d59.94046099356573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696378cc74a65ed%3A0x6dc7673fab848eff!2z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sru!4v1637769645429!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class='pay-map Novosibirsk'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d146570.96861311342!2d82.80932376362384!3d54.97009358897175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe5e190cc4d97%3A0x9b3a0673e1d3e985!2z0J3QvtCy0L7RgdC40LHQuNGA0YHQuiwg0J3QvtCy0L7RgdC40LHQuNGA0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1637769863805!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class='pay-map ekaterinburg'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d139774.65643518607!2d60.47729964083626!3d56.81199149312425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c165eaa062db4b%3A0xd50243d7f7567f20!2z0JXQutCw0YLQtdGA0LjQvdCx0YPRgNCzLCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1637769892115!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+
+                        <div class='pay-map nizhny novgorod'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d141707.8039273505!2d43.78608537616221!3d56.292128982733566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4151d5f9ee033251%3A0x28d3c0cf849657aa!2z0J3QuNC20L3QuNC5INCd0L7QstCz0L7RgNC-0LQsINCd0LjQttC10LPQvtGA0L7QtNGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1637769926237!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class='pay-map chelyabinsk'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d145905.93312573378!2d61.2684893358367!3d55.15212488193419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c592cb104a3a8d%3A0xef224a2a6d1711bf!2z0KfQtdC70Y_QsdC40L3RgdC6LCDQp9C10LvRj9Cx0LjQvdGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1637769948538!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class='pay-map sochi'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46227.66016737523!2d39.69010960305255!3d43.6017783104808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40f5d4e111834423%3A0x6e6f61866a5d5df8!2z0KHQvtGH0LgsINCa0YDQsNGB0L3QvtC00LDRgNGB0LrQuNC5INC60YDQsNC5!5e0!3m2!1sru!2sru!4v1637947481944!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class='pay-map soshi'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d143543.23894013188!2d48.93322191478997!3d55.79561489264516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead2b7caccd99%3A0x7fcb77b9b5ad8c65!2z0JrQsNC30LDQvdGMLCDQoNC10YHQvy4g0KLQsNGC0LDRgNGB0YLQsNC9!5e0!3m2!1sru!2sru!4v1637947752258!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                        <div class='pay-map samara'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152741.81826270715!2d50.05799565774351!3d53.2610312884673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416618e22bd879d3%3A0xba95cda9bb3a030b!2z0KHQsNC80LDRgNCwLCDQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1637947515689!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                        <div class='pay-map perm'>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d135236.19021754226!2d56.094194742803026!3d58.02059090764362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43e8c6e1d886f20b%3A0x9b4aca02b87a8a0e!2z0J_QtdGA0LzRjCwg0J_QtdGA0LzRgdC60LjQuSDQutGA0LDQuQ!5e0!3m2!1sru!2sru!4v1637947545633!5m2!1sru!2sru"
+                                width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+    
+                    </div>
+
+                </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class='modal-question-wrapper'>
+            <div class='modal__choose'>
+                <h1>Это ваш город?</h1>
+                <h1 class='town'>Москва</h1>
+                <div class='buttons'>
+                    <button class='yes'>Да</button>
+                    <button class='not'>Нет, выбрать другой</button>
+                </div>
+            </div>
+        </div>
+        <header class='header' id='header'>
+            <div class = 'header-content'>
+                <div class='logo'>
+                    <img src='icons/logo.png'>
+                    <h1 class='company-name'>VAPIZZA</h1>
+                </div>
+                <div class='town'>
+                    <p>Ваш город: <span class='town__choose'> Москва</span></p>
+                </div>
+            </div>
+        </header>
+        <nav id='menu'>
+            <ul class='navigation'>
+                <li class='nav__item btns ' id='nav-logo'><a href='#header'><img class=logo_href
+                            src='icons/logo.png'></a></li>
+                <li class='nav__item pizza-nav add-margin btns'><a href='#pizza-item' class=nav__item-link> Пиццы </a>
+                </li>
+                <li class='nav__item burger-nav add-margin btns'><a href='#burger-item' class=nav__item-link> Бургеры
+                    </a></li>
+                <li class='nav__item combo-nav add-margin btns'><a href='#combo-item' class=nav__item-link> Комбо </a>
+                </li>
+                <li class='nav__item beverage-nav add-margin btns'><a href='#beverage-item' class=nav__item-link>
+                        Напитки </a></li>
+                <li class='nav__item other-nav add-margin btns'><a href='#other-item' class=nav__item-link> Прочее </a>
+                </li>
+                <li class='nav__item accessory-nav add-margin btns'><a href='#accessory-item  ' class=nav__item-link>
+                        Аксессуары </a></li>
+                <li class='nav__item nav__item-basket'><a class='basket'>Корзина</a></li>
+            </ul>
+            <div class='basket-wrapper'>
+
+                    <div class = 'second-basket-wrapper'>
+                        <div class='basket-menu'>
+                        <h1 class='order-info'> <span class = 'count'>N</span> заказ<span class = 'word-ending'>ов</span> на <span class = 'sum'>N</span> Руб </h1>
+                        <div class='basket-item-field'>
+    
+                            <div class='basket-item-wrapper'>
+
+                                <div class = 'empty-basket-block'>
+                                    <img src = './icons/emptyBasket.png'>
+                                    <h1>Сейчас в корзине пусто</h1>
+                                </div>
+
+
+
+                               
+
+                                <!-- <div class='basket-item'>
+                                         <div class='basket-item-content'>
+                                             <img class='picture' src='${this.img}'>
+                                             <div class='basket-item-descr'>
+                                                 <h1 class='item-name'>Арива</h1>
+                                                 <p class='item-descr'>
+                                                 ${this.descr}
+                                                 </p>
+                                             </div> 
+                                             <div class='priceNsecond'>
+                                                <p class='item-price'>${this.price}</p>
+                                                <div class='addNdecrease-item'>
+                                                   <img class='decrease-item' src='./icons/minus.png'>
+                                                     <p class='item-count'>1</p>
+                                                     <img class='add-item' src='./icons/plus.png'>
+                                                 </div>
+                                             </div>
+                                             <img class='delete-item' src='./icons/close01.png'>
+                                         </div>
+                                     </div> -->
+
+
+                            </div> 
+                        </div>
+                        <div class='total-sum'>
+                            <h1>Итого:</h1>
+                            <p class = 'sum'>0</p>
+                        </div>
+                        <!-- <div class='promo'>
+                            <form class='promo-activate'>
+                                <input type='text' id='promo-value' maxlength='10' placeholder='промокод'>
+                            </form>
+                        </div> -->
+                        <button class = 'open-pay-modal-btn'>Оплатить</button>
+                    </div>
+
+                    <div class='close-basket'>
+                        <img src='./icons/close01.png'>
+                    </div>
+
+                    <div class='basket-other'>
+                        <div class='basket-other-field'>
+                            <ul>
+                                <li class='basket-other-item' id = 'a35'>
+                                    <h1 class = 'hidden'>Кетчуп</h1>
+                                    <img src='./img/other/01.jpeg'>
+                                    <div class='add-other-item'><img id='add-other-product' src='./icons/plus.png'></div>
+                                    <p class = 'price hidden'>30</p>
+                                </li>
+
+                                <li class='basket-other-item' id = 'a36'>
+                                    <h1 class = 'hidden'>Барбекю</h1>
+                                    <img src='./img/other/02.jpeg'>
+                                    <div class='add-other-item'><img id='add-other-product' src='./icons/plus.png'></div>
+                                    <p class = 'price hidden'>30</p>
+                                </li>
+
+                                <li class='basket-other-item' id = 'a37'>
+                                    <h1 class = 'hidden'>Чесночный</h1>
+                                    <img src='./img/other/03.jpeg'>
+                                    <div class='add-other-item'><img id='add-other-product' src='./icons/plus.png'></div>
+                                    <p class = 'price hidden'>30</p>
+                                </li>
+
+                                <li class='basket-other-item' id = 'a38'>
+                                    <h1 class = 'hidden'>Сырный</h1>
+                                    <img src='./img/other/04.jpeg'>
+                                    <div class='add-other-item'><img id='add-other-product' src='./icons/plus.png'></div>
+                                    <p class = 'price hidden'>30</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+                </div>
+        </nav>
+
+
+        <div class='single-item'>
+            <div class='slider'><img src='img/sliders/slider01.png'></div>
+            <div class='slider'><img src='img/sliders/slider02.png'></div>
+            <div class='slider'><img src='img/sliders/slider03.png'></div>
+        </div>
+        </div>
+
+
+        <!-- <div class = 'total-sum'>
+            <h1>Итого:</h1>
+            <p>228</p>
+        </div>
+       </div>
+    </nav>
+    <div class = 'single-item'>
+        <div class = 'slider'><img src = 'img/sliders/slider01.png'></div>
+        <div class = 'slider'><img src = 'img/sliders/slider02.png'></div>
+        <div class = 'slider'><img src = 'img/sliders/slider03.png'></div>
+    </div> -->
+
+
+        <main class='main-content'>
+            <div class='common-wrapper'>
+                <div class='anchor' id='pizza-item'></div>
+                <h1 class='product-type pizza-itm'>Пиццы</h1>
+                <div class='item-wrapper'>
+
+                    <div class='item' id = 'a01'>
+                        <img src='img/pizzas/01.jpeg'>
+                        <h1>Арива</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 300руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+
+                    </div>
+
+                    <div class='item' id = 'a02'>
+                        <img src='img/pizzas/02.jpeg'>
+                        <h1>Капрезе</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 300руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+
+                    </div>
+
+                    <div class='item' id = 'a03'>
+                        <img src='img/pizzas/03.jpeg'>
+                        <h1>Фонтана</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 300руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+
+                    </div>
+
+                    <div class='item' id = 'a04'>
+                        <img src='img/pizzas/04.jpeg'>
+                        <h1>Пепперони</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 300руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+
+                    </div>
+
+                    <div class='item' id = 'a05'>
+                        <img src='img/pizzas/05.jpeg'>
+                        <h1>Тирольская</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 300руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+
+                    </div>
+
+                    <div class='item' id = 'a06'>
+                        <img src='img/pizzas/06.jpeg'>
+                        <h1>Американо</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 300руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+
+                    </div>
+
+                    <div class='item' id = 'a07'>
+                        <img src='img/pizzas/07.jpeg'>
+                        <h1>Сардиния</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 300руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+
+                    </div>
+
+                    <div class='item' id = 'a08'>
+                        <img src='img/pizzas/08.jpeg'>
+                        <h1>Скьяччата</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 300руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+
+                    </div>
+
+                    <div class='item' id = 'a09'>
+                        <img src='img/pizzas/09.jpeg'>
+                        <h1>Эмилиана</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 300руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+
+                    </div>
+
+                    <div class='item' id = 'a10'>
+                        <img src='img/pizzas/10.jpeg'>
+                        <h1>Крудо</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 300руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+
+                    </div>
+
+                    <div class='item' id = 'a11'>
+                        <img src='img/pizzas/11.jpeg'>
+                        <h1>Папайя</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 300руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+
+                    </div>
+
+                    <div class='item' id = 'a12'>
+                        <img src='img/pizzas/12.jpeg'>
+                        <h1>Маргарита</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 300руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class='anchor' id='burger-item'></div>
+                <h1 class='product-type burger-itm' id='burger-item'>Бургеры</h1>
+                <div class='item-wrapper burger-wrapper'>
+                    <div class='item' id = 'a13'>
+                        <img src='img/burgers/01.png'>
+                        <h1>Крабс</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 220руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a14'>
+                        <img src='img/burgers/02.png'>
+                        <h1>Цезарь</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 220руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a15'>
+                        <img src='img/burgers/03.png'>
+                        <h1>Капрезе</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 220руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a16'>
+                        <img src='img/burgers/04.png'>
+                        <h1>Васаби</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 220руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a17'>
+                        <img src='img/burgers/05.png'>
+                        <h1>По-фински</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 220руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a18'>
+                        <img src='img/burgers/06.png'>
+                        <h1>А ля рус</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 220руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a19'>
+                        <img src='img/burgers/07.png'>
+                        <h1>Филе о фиш</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 220руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a20'>
+                        <img src='img/burgers/08.png'>
+                        <h1>Тейсти</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 220руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!--Конец обёртки-->
+                <div class='anchor' id='combo-item'></div>
+                <h1 class='product-type combo-itm' id='combo-item'>Комбо</h1>
+                <div class='item-wrapper'>
+                    <div class='item' id = 'a21'>
+                        <img src='img/combos/01.jpeg'>
+                        <h1>Соло</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 500руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a22'>
+                        <img src='img/combos/02.jpeg'>
+                        <h1>2 пиццы</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 500руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a23'>
+                        <img src='img/combos/03.jpeg'>
+                        <h1>2 пиццы + напиток</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 500руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a24'>
+                        <img src='img/combos/04.jpeg'>
+                        <h1>3 пиццы</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 500руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a25'>
+                        <img src='img/combos/05.png'>
+                        <h1>Тейсти комбо</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 500руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a26'>
+                        <img src='img/combos/06.png'>
+                        <h1>Цезарь комбо</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 500руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a27'>
+                        <img src='img/combos/07.png'>
+                        <h1>Васаби комбо</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'>От 500руб</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <!---->
+                </div>
+                <div class='anchor' id='beverage-item'></div>
+                <h1 class='product-type beverage-itm' id='beverage-item'>Напитки</h1>
+                <div class='item-wrapper'>
+                    <div class='item' id = 'a28'>
+                        <img src='img/beverage/01.jpg'>
+                        <h1>Pepsi</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'> 60 рублей</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a29'>
+                        <img src='img/beverage/02.jpg'>
+                        <h1>Fanta</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'> 60 рублей</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a30'>
+                        <img src='img/beverage/03.jpg'>
+                        <h1>Mtn-dew</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'> 60 рублей</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a31'>
+                        <img src='img/beverage/04.jpg'>
+                        <h1>Sprite</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'> 60 рублей</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a32'>
+                        <img src='img/beverage/05.jpg'>
+                        <h1>Coca - Cola</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'> 60 рублей</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a33'>
+                        <img src='img/beverage/06.jpg'>
+                        <h1>Burn</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'> 60 рублей</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a34'>
+                        <img src='img/beverage/07.jpg'>
+                        <h1>Black Monster</h1>
+                        <p class='descr'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'> 60 рублей</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+                </div>
+                <div class='anchor' id='other-item'></div>
+                <h1 class='product-type other-itm' id='other-item'>Прочее</h1>
+                <div class='item-wrapper'>
+                    <div class='item' id = 'a35'>
+                        <img src='img/other/01.jpeg'>
+                        <h1>Кетчуп</h1>
+                        <p class='descr'></p> <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'> 30 рублей</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a36'>
+                        <img src='img/other/02.jpeg'>
+                        <h1>Барбекю</h1>
+                        <p class='descr'></p> <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'> 30 рублей</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+
+                    <div class='item' id = 'a37'>
+                        <img src='img/other/03.jpeg'>
+                        <h1>Чесночный</h1>
+                        <p class='descr'></p> <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'> 30 рублей</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+                    <div class='item' id = 'a38'>
+                        <img src='img/other/04.jpeg'>
+                        <h1>Сырный</h1>
+                        <p class='descr'></p> <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'> 30 рублей</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+                </div>
+                <div class='anchor' id='accessory-item'></div>
+                <h1 class='product-type accessory-itm' id='accessory-item'>Аксессуары</h1>
+                <div class='item-wrapper'>
+                    <div class='item' id = 'a39'>
+                        <img src='img/accessories/accesory.png'>
+                        <h1>Брелок</h1>
+                        <p class='descr'> Метка жертвы</p> <!-- description - описание -->
+                        <div class='priceNbutton'>
+                            <div class='price'> 200 рублей</div>
+                            <button id='add_product'><img src='./icons/plus.png'></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class='footer'>
+            <div class='locality'>
+                <h1>Мы находимся в:</h1>
+                <ul>
+                    <li>Москва</li>
+                    <li>Санкт-Петербург</li>
+                    <li>Новосибирск</li>
+                    <li>Екатеринбург</li>
+                    <li>Нижний Новгород</li>
+                    <li>Челябинск</li>
+                    <li>Сочи</li>
+                    <li>Казань</li>
+                    <li>Самара</li>
+                    <li>Пермь</li>
+                </ul>
+            </div>
+            <a href=#header><img class='logo__footer' src='icons/footer-logo.png'></a>
+            <div class='connection'>
+                <div class='help'>
+                    <p class='email-help'>По всем вопросам обращаться на почту </p>
+                    <h1 class='email'>dafu4k@mail.ru</h1>
+                </div>
+                <div class='socials'>
+                    <a href='#header'><img src='icons/socials/vk.png'></a>
+                    <a href='#header'><img src='icons/socials/facebook.png'></a>
+                    <a href='#header'><img src='icons/socials/twitter.png'></a>
+                    <a href='#header'><img src='icons/socials/youtube.png'></a>
+                </div>
+            </div>
+        </footer>
+        <div class = 'order-alert-wrapper'>
+                <div class = 'alert-block'>
+                    <h1>Товар добавлен в корзину</h1>
+                </div>
+        </div>
+
+        <div class = 'order-decline-alert-wrapper'>
+            <div class = 'decline-alert-block'>
+                <h1>Товар уже есть в корзине</h1>
+            </div>
+        </div>
+        <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+
+        <script src='./dist/bundle.js'></script>
+        <script src='./slick.min.js'></script>
+
+
+    </body>
+
+    </html>
